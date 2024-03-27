@@ -1,0 +1,274 @@
+:root {
+    --red: rgb(104, 6, 6);
+    --black: rgb(0, 0, 0);
+    --darkgrey: rgba(49, 46, 46, 0.5);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-family: "Lato", Verdana, Helvetica, sans-serif;
+    color: var(--black);
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    background-color: var(--red);
+    padding-left: 60px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header {
+    display: flex;
+    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--black);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 400px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 50px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+}
+
+
+.picture {
+    display: flex;
+    background-image: url(../image/Main-Image.png);
+    background-size: cover;
+    height: 350px;
+    position: relative;
+    justify-content: flex-end;
+    margin-bottom: 1%;
+}
+
+.background-titlebox {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--red);
+    color: var(--black);
+    height: 75px;
+    width: auto;
+}
+
+
+
+#about-me,
+#work,
+#contact-me {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    min-width: 25%;
+    text-align: end;
+    padding: 10px;
+    padding-right: 20px;
+    border-right: 2px solid var(--gray);
+}
+
+
+section p {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+main a:link,
+a:visited {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+nav ul a:link,
+a:visited {
+    color: var(--red);
+}
+
+
+.library {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    margin: 20px;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-titlebox {
+    position: relative;
+    bottom: 150px;
+    left: 10px;
+    background-color: var(--red);
+    color: var(--black);
+    height: 60px;
+    width: 50%;;
+}
+
+.feature-card img {
+    width: 100%;
+    border: 2px solid var(--black);
+    filter: grayscale(.6) blur(1px);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.titlebox {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: var(--red);
+    color: var(--black);
+    height: 75px;
+    width: auto;
+
+}
+
+.project-name {
+    font-size: 28px;
+    font-weight: 550;
+    line-height: 4px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    color: var(--black);
+}
+
+.project-language {
+    font-size: 12px;
+    color: var(--black);
+}
+
+.card img {
+    border: 2px solid var(--black);
+    width: 60%;
+    height: 200px;
+    filter: grayscale(.6) blur(1px);
+}
+
+img:hover {
+    filter: none;
+}
+
+
+
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: var(--black);
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+}
+
+.contact-links a {
+    color: var(--black);
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 2%;
+    }
+
+    h1 {
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+
+    nav ul {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section h2 {
+        text-align: left;
+        padding-left: 20px;
+        border-right: none;
+        border-bottom: 2px solid var(--black);
+        margin: 10px;
+    }
+
+    section p {
+        padding-bottom: 4%;
+    }
+
+    .feature-titlebox {
+
+        top: 115px;
+        left: 15px;
+    }
+
+    .feature-card img {
+        height: 200px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .project-name {
+        margin-bottom: 1%;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+    }
+}
